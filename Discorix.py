@@ -20,7 +20,7 @@ banwordson = 'true'
 
 @client.event
 async def on_message(message):
- if message.content.startswith('ваш префикс тут'): await client.process_commands(message)
+ if message.content.startswith('//'): await client.process_commands(message)
  else:
     banwords = ["хуй", "блядина", "пизда", "пидр", "пидор", "пидар", "пидорас", "пидарас", "гандон", "сука", "даун", "дибил", "сучка", "ебать", "еблан", "ахуеть", "ебать", "нихуя", "пиздец", "блядь", "блять", "член", "залупа"]
     if banwordson == 'true':
@@ -69,7 +69,7 @@ async def info(ctx):
 
 @client.command()
 async def code(ctx):
-    await ctx.send(f"ссылка на код бота:")
+    await ctx.send(f"ссылка на код бота:https://github.com/kot27833/Discorix.py/blob/main/Discorix.py")
 
 @client.command(pass_context = True)
 @commands.has_permissions(administrator = True)
